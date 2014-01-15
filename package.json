@@ -1,0 +1,17 @@
+{
+  "name": "ddot-watcher",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.3.x"
+  },
+  "dependencies": {
+    "lodash": "2.4.1",
+    "moment": "2.5.x",
+    "moment-timezone": "0.0.x",
+    "twilio": "1.5.0"
+  },
+  "devDependencies": {
+  }
+}
