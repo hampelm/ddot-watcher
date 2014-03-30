@@ -11,7 +11,7 @@
     "lodash": "2.4.1",
     "moment": "2.5.x",
     "moment-timezone": "0.0.x",
-    "twilio": "1.5.0"
+    "twilio": "1.6.0"
   },
   "devDependencies": {
   }

@@ -5,9 +5,10 @@ var url = 'http://ddot-beta.herokuapp.com/api/api/where/vehicles-for-agency/DDOT
 var key = "?key=BETA&format=json";
 var base = "http://ddot-beta.herokuapp.com/api/api/where/";
 
-var twilioAccount = process.env.TWILIO || '';
-var twilioAuth = process.env.TWILIO_AUTH || '';
+var twilioAccount = process.env.TWILIO_ACCOUNT_SID || '';
+var twilioAuth = process.env.TWILIO_AUTH_TOKEN || '';
 var phone = process.env.PHONE;
+var send_to = process.env.SEND_TEXT_TO;
 
 var http = require('http');
 var _ = require('lodash');
@@ -23,12 +24,14 @@ var client = require('twilio')(twilioAccount, twilioAuth);
  */
 
 function sms(message) {
-  client.sms.messages.create({
+  client.sendMessage({
     body: message,
-    to: phone,
+    to: send_to,
     from: phone
-  }, function(err, message) {
-    console.log(message.sid);
+  }, function(error, response) {
+    if(error) {
+      console.log("Error sending message", error);
+    }
   });
 }
 
