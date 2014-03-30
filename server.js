@@ -14,7 +14,7 @@ var _ = require('lodash');
 var moment = require('moment-timezone');
 var async = require('async');
 
-//var client = require('twilio')(twilioAccount, twilioAuth);
+var client = require('twilio')(twilioAccount, twilioAuth);
 
 /**
  * This script checks the DDOT API to see how many buses are tracked
