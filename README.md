@@ -1,4 +1,4 @@
-Watches the DDOT server and let us know via SMS if there are problems
+Watches the TextMyBus API and lets us know via SMS if there are problems
 
 Install: `npm install`
 
